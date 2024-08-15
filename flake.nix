@@ -16,14 +16,14 @@
         stripRoot = false;
       };
       aseprite-src = pkgs.fetchzip {
-        url = "https://github.com/aseprite/aseprite/releases/download/v1.3.2/Aseprite-v1.3.2-Source.zip";
-        hash = "sha256-d3Q442ApykU0AbmDP/Tx7WqmbG9Wb3PxCnIAnf0+VjU=";
+        url = "https://github.com/aseprite/aseprite/releases/download/v1.3.7/Aseprite-v1.3.7-Source.zip";
+        hash = "sha256-D3u+LzF0470YmU+vnpzRBn7i4CPUCasRdX7EsUyG5qk=";
         stripRoot = false;
       };
     in {
       packages."x86_64-linux".default = stdenv.mkDerivation {
         name = "aseprite";
-        version = "1.3.2";
+        version = "1.3.7";
         src = "${aseprite-src}";
         nativeBuildInputs = with pkgs; [
           clang
